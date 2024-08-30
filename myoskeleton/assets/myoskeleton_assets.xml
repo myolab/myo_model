@@ -1,0 +1,190 @@
+<mujocoinclude model="MyoSkeleton">
+<!-- =================================================
+	Copyright 2024 MyoLab
+	License :: APGL
+====================================================== -->
+    <compiler boundmass="0.001" boundinertia="0.001" balanceinertia="true" meshdir=".." texturedir=".." angle="radian" inertiafromgeom="auto">
+        <lengthrange useexisting="true" inttotal="50"/>
+    </compiler>
+
+    <option timestep="0.002"/>
+    <size njmax="1000" nconmax="400" nuser_jnt="1"/>
+
+    <default>
+        <default class="myo">
+            <joint limited="true" stiffness="2" armature="0.1" damping="0.5"/>
+            <geom contype="0" conaffinity="0" rgba="0.8 0.8 0.8 1" margin="0.001"/>
+            <site size="0.001" group="3"/>
+            <tendon width="0.001" rgba="0.95 0.3 0.3 1" limited="false"/>
+            <default class="bone">
+                <geom group="0" type="mesh" rgba="0.89 0.85 0.98 1"/>
+            </default>
+            <default class="motor">
+                <general gainprm="5 0 0 0 0 0 0 0 0 0"/>
+            </default>
+            <default class="myo_marker">
+                <site size="0.01" group="4" rgba="0.8 0.2 .6 1"/>
+            </default>
+            <default class="myo_coll">
+                <geom type="capsule" group="3" contype="1" conaffinity="0" condim="3" rgba="0.8 0.7 0.5 1" margin="0.001"/>
+            </default>
+      <default class="skin">
+        <geom type="capsule" contype="1" conaffinity="1" condim="3" group="1" material="MatSkin" rgba="0.8 0.7 0.5 1" margin="0.001"/>
+      </default>
+      <default class="wrap">
+        <geom contype="0" conaffinity="0" group="3" rgba="0.5 0.5 0.9 1"/>
+            </default>
+        </default>
+    </default>
+
+    <asset>
+        <mesh name="pelvis_r" file="../myo_model/meshes/r_pelvis.stl" scale="1 1 1"/>
+        <mesh name="pelvis_l" file="../myo_model/meshes/l_pelvis.stl" scale="1 1 1"/>
+        <mesh name="sacrum" file="../myo_model/meshes/sacrum.stl" scale="1 1 1"/>
+        <mesh name="femur_r" file="../myo_model/meshes/r_femur.stl" scale="1 1 1"/>
+        <mesh name="tibia_r" file="../myo_model/meshes/r_tibia.stl" scale="1 1 1"/>
+        <mesh name="fibula_r" file="../myo_model/meshes/r_fibula.stl" scale="1 1 1"/>
+        <mesh name="talus_r" file="../myo_model/meshes/r_talus.stl" scale="1 1 1"/>
+        <mesh name="foot_r" file="../myo_model/meshes/r_foot.stl" scale="1 1 1"/>
+        <mesh name="bofoot_r" file="../myo_model/meshes/r_bofoot.stl" scale="1 1 1"/>
+        <mesh name="patella_r" file="../myo_model/meshes/r_patella.stl" scale="1 1 1"/>
+        <mesh name="femur_l" file="../myo_model/meshes/l_femur.stl" scale="1 1 1"/>
+        <mesh name="tibia_l" file="../myo_model/meshes/l_tibia.stl" scale="1 1 1"/>
+        <mesh name="fibula_l" file="../myo_model/meshes/l_fibula.stl" scale="1 1 1"/>
+        <mesh name="talus_l" file="../myo_model/meshes/l_talus.stl" scale="1 1 1"/>
+        <mesh name="foot_l" file="../myo_model/meshes/l_foot.stl" scale="1 1 1"/>
+        <mesh name="bofoot_l" file="../myo_model/meshes/l_bofoot.stl" scale="1 1 1"/>
+        <mesh name="patella_l" file="../myo_model/meshes/l_patella.stl" scale="1 1 1"/>
+        <mesh name="jaw" file="../myo_model/meshes/jaw.stl" scale="0.9 0.9 0.9"/>
+        <mesh name="skull" file="../myo_model/meshes/skull.stl" scale="0.9 0.9 0.9"/>
+        <mesh name="lumbar5" file="../myo_model/meshes/lumbar5.stl" scale="0.93 0.93 0.93"/>
+        <mesh name="lumbar4" file="../myo_model/meshes/lumbar4.stl" scale="0.93 0.93 0.93"/>
+        <mesh name="lumbar3" file="../myo_model/meshes/lumbar3.stl" scale="0.93 0.93 0.93"/>
+        <mesh name="lumbar2" file="../myo_model/meshes/lumbar2.stl" scale="0.93 0.93 0.93"/>
+        <mesh name="lumbar1" file="../myo_model/meshes/lumbar1.stl" scale="0.93 0.93 0.93"/>
+        <mesh name="cerv1" file="../myo_model/meshes/cerv1.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv2" file="../myo_model/meshes/cerv2.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv3" file="../myo_model/meshes/cerv3.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv4" file="../myo_model/meshes/cerv4.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv5" file="../myo_model/meshes/cerv5.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv6" file="../myo_model/meshes/cerv6.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="cerv7" file="../myo_model/meshes/rotatedcerv7.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic12_s" file="../myo_model/meshes/thoracic12_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic11_s" file="../myo_model/meshes/thoracic11_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic10_s" file="../myo_model/meshes/thoracic10_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic9_s" file="../myo_model/meshes/thoracic9_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic8_s" file="../myo_model/meshes/thoracic8_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic7_s" file="../myo_model/meshes/thoracic7_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic6_s" file="../myo_model/meshes/thoracic6_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic5_s" file="../myo_model/meshes/thoracic5_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic4_s" file="../myo_model/meshes/thoracic4_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic3_s" file="../myo_model/meshes/thoracic3_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic2_s" file="../myo_model/meshes/thoracic2_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thoracic1_s" file="../myo_model/meshes/thoracic1_s.stl" scale="0.89 0.89 0.89"/>
+        <mesh name="thorax" file="../myo_model/meshes/thorax.stl" scale="0.9 1.1 1"/>
+        <mesh name="clavicle_r" file="../myo_model/meshes/clavicle.stl" scale="1 1 1"/>
+        <mesh name="scapula_r" file="../myo_model/meshes/scapula.stl" scale="1 1 1"/>
+        <mesh name="humerus_r" file="../myo_model/meshes/humerus.stl" scale="1 1 1"/>
+        <mesh name="ulna_r" file="../myo_model/meshes/ulna.stl" scale="1 1 1"/>
+        <mesh name="radius_r" file="../myo_model/meshes/radius.stl" scale="1 1 1"/>
+        <mesh name="lunate_r" file="../myo_model/meshes/lunate.stl" scale="1 1 1"/>
+        <mesh name="scaphoid_r" file="../myo_model/meshes/scaphoid.stl" scale="1 1 1"/>
+        <mesh name="pisiform_r" file="../myo_model/meshes/pisiform.stl" scale="1 1 1"/>
+        <mesh name="triquetrum_r" file="../myo_model/meshes/triquetrum.stl" scale="1 1 1"/>
+        <mesh name="capitate_r" file="../myo_model/meshes/capitate.stl" scale="1 1 1"/>
+        <mesh name="trapezium_r" file="../myo_model/meshes/trapezium.stl" scale="1 1 1"/>
+        <mesh name="1mc_r" file="../myo_model/meshes/1mc.stl" scale="1 1 1"/>
+        <mesh name="thumbprox_r" file="../myo_model/meshes/thumbprox.stl" scale="1 1 1"/>
+        <mesh name="thumbdist_r" file="../myo_model/meshes/thumbdist.stl" scale="1 1 1"/>
+        <mesh name="trapezoid_r" file="../myo_model/meshes/trapezoid.stl" scale="1 1 1"/>
+        <mesh name="hamate_r" file="../myo_model/meshes/hamate.stl" scale="1 1 1"/>
+        <mesh name="2mc_r" file="../myo_model/meshes/2mc.stl" scale="1 1 1"/>
+        <mesh name="2proxph_r" file="../myo_model/meshes/2proxph.stl" scale="1 1 1"/>
+        <mesh name="2midph_r" file="../myo_model/meshes/2midph.stl" scale="1 1 1"/>
+        <mesh name="2distph_r" file="../myo_model/meshes/2distph.stl" scale="1 1 1"/>
+        <mesh name="3mc_r" file="../myo_model/meshes/3mc.stl" scale="1 1 1"/>
+        <mesh name="3proxph_r" file="../myo_model/meshes/3proxph.stl" scale="1 1 1"/>
+        <mesh name="3midph_r" file="../myo_model/meshes/3midph.stl" scale="1 1 1"/>
+        <mesh name="3distph_r" file="../myo_model/meshes/3distph.stl" scale="1 1 1"/>
+        <mesh name="4mc_r" file="../myo_model/meshes/4mc.stl" scale="1 1 1"/>
+        <mesh name="4proxph_r" file="../myo_model/meshes/4proxph.stl" scale="1 1 1"/>
+        <mesh name="4midph_r" file="../myo_model/meshes/4midph.stl" scale="1 1 1"/>
+        <mesh name="4distph_r" file="../myo_model/meshes/4distph.stl" scale="1 1 1"/>
+        <mesh name="5mc_r" file="../myo_model/meshes/5mc.stl" scale="1 1 1"/>
+        <mesh name="5proxph_r" file="../myo_model/meshes/5proxph.stl" scale="1 1 1"/>
+        <mesh name="5midph_r" file="../myo_model/meshes/5midph.stl" scale="1 1 1"/>
+        <mesh name="5distph_r" file="../myo_model/meshes/5distph.stl" scale="1 1 1"/>
+        <mesh name="clavicle_l" file="../myo_model/meshes/clavicle_l.stl" scale="1 1 1"/>
+        <mesh name="scapula_l" file="../myo_model/meshes/scapula_l.stl" scale="1 1 1"/>
+        <mesh name="humerus_l" file="../myo_model/meshes/humerus_l.stl" scale="1 1 1"/>
+        <mesh name="ulna_l" file="../myo_model/meshes/ulna_l.stl" scale="1 1 1"/>
+        <mesh name="radius_l" file="../myo_model/meshes/radius_l.stl" scale="1 1 1"/>
+        <mesh name="lunate_l" file="../myo_model/meshes/lunate_l.stl" scale="1 1 1"/>
+        <mesh name="scaphoid_l" file="../myo_model/meshes/scaphoid_l.stl" scale="1 1 1"/>
+        <mesh name="pisiform_l" file="../myo_model/meshes/pisiform_l.stl" scale="1 1 1"/>
+        <mesh name="triquetrum_l" file="../myo_model/meshes/triquetrum_l.stl" scale="1 1 1"/>
+        <mesh name="capitate_l" file="../myo_model/meshes/capitate_l.stl" scale="1 1 1"/>
+        <mesh name="trapezium_l" file="../myo_model/meshes/trapezium_l.stl" scale="1 1 1"/>
+        <mesh name="1mc_l" file="../myo_model/meshes/1mc_l.stl" scale="1 1 1"/>
+        <mesh name="thumbprox_l" file="../myo_model/meshes/thumbprox_l.stl" scale="1 1 1"/>
+        <mesh name="thumbdist_l" file="../myo_model/meshes/thumbdist_l.stl" scale="1 1 1"/>
+        <mesh name="trapezoid_l" file="../myo_model/meshes/trapezoid_l.stl" scale="1 1 1"/>
+        <mesh name="hamate_l" file="../myo_model/meshes/hamate_l.stl" scale="1 1 1"/>
+        <mesh name="2mc_l" file="../myo_model/meshes/2mc_l.stl" scale="1 1 1"/>
+        <mesh name="2proxph_l" file="../myo_model/meshes/2proxph_l.stl" scale="1 1 1"/>
+        <mesh name="2midph_l" file="../myo_model/meshes/2midph_l.stl" scale="1 1 1"/>
+        <mesh name="2distph_l" file="../myo_model/meshes/2distph_l.stl" scale="1 1 1"/>
+        <mesh name="3mc_l" file="../myo_model/meshes/3mc_l.stl" scale="1 1 1"/>
+        <mesh name="3proxph_l" file="../myo_model/meshes/3proxph_l.stl" scale="1 1 1"/>
+        <mesh name="3midph_l" file="../myo_model/meshes/3midph_l.stl" scale="1 1 1"/>
+        <mesh name="3distph_l" file="../myo_model/meshes/3distph_l.stl" scale="1 1 1"/>
+        <mesh name="4mc_l" file="../myo_model/meshes/4mc_l.stl" scale="1 1 1"/>
+        <mesh name="4proxph_l" file="../myo_model/meshes/4proxph_l.stl" scale="1 1 1"/>
+        <mesh name="4midph_l" file="../myo_model/meshes/4midph_l.stl" scale="1 1 1"/>
+        <mesh name="4distph_l" file="../myo_model/meshes/4distph_l.stl" scale="1 1 1"/>
+        <mesh name="5mc_l" file="../myo_model/meshes/5mc_l.stl" scale="1 1 1"/>
+        <mesh name="5proxph_l" file="../myo_model/meshes/5proxph_l.stl" scale="1 1 1"/>
+        <mesh name="5midph_l" file="../myo_model/meshes/5midph_l.stl" scale="1 1 1"/>
+        <mesh name="5distph_l" file="../myo_model/meshes/5distph_l.stl" scale="1 1 1"/>
+    </asset>
+
+    <contact>
+        <exclude body1="ulna_r" body2="radius_r"/>
+        <exclude body1="radius_r" body2="firstmc_r"/>
+        <exclude body1="3proxph_r" body2="3proxph_r"/>
+        <exclude body1="3proxph_r" body2="4proxph_r"/>
+        <exclude body1="4proxph_r" body2="5proxph_r"/>
+        <pair geom1="femur1_r_coll" geom2="femur1_l_coll" condim="3"/>
+        <pair geom1="femur2_r_coll" geom2="femur2_l_coll" condim="3"/>
+        <pair geom1="tibia1_r_coll" geom2="tibia1_l_coll" condim="3"/>
+        <pair geom1="tibia2_r_coll" geom2="tibia2_l_coll" condim="3"/>
+        <pair geom1="foot1_r_coll" geom2="foot1_l_coll" condim="3"/>
+        <pair geom1="foot2_r_coll" geom2="foot2_l_coll" condim="3"/>
+        <pair geom1="humerus_r_coll" geom2="abdomen_coll" condim="3"/>
+        <pair geom1="humerus_r_coll" geom2="thorax_coll1" condim="3"/>
+        <pair geom1="radius_r_coll" geom2="abdomen_coll" condim="3"/>
+        <pair geom1="radius_r_coll" geom2="thorax_coll1" condim="3"/>
+        <pair geom1="radius_r_coll" geom2="thorax_coll2" condim="3"/>
+        <pair geom1="radius_r_coll" geom2="thorax_coll3" condim="3"/>
+        <pair geom1="coll_humerus_l" geom2="abdomen_coll" condim="3"/>
+        <pair geom1="coll_humerus_l" geom2="thorax_coll1" condim="3"/>
+        <pair geom1="coll_radius_l" geom2="abdomen_coll" condim="3"/>
+        <pair geom1="coll_radius_l" geom2="thorax_coll1" condim="3"/>
+        <pair geom1="coll_radius_l" geom2="thorax_coll2" condim="3"/>
+        <pair geom1="coll_radius_l" geom2="thorax_coll3" condim="3"/>
+    </contact>
+
+    <sensor>
+        <accelerometer name="wrist_r_acc" site="s_wrist_r"/>
+        <accelerometer name="wrist_l_acc" site="s_wrist_l"/>
+        <accelerometer name="head_acc" site="s_head"/>
+        <magnetometer name="wrist_r_mag" site="s_wrist_r"/>
+        <magnetometer name="wrist_l_mag" site="s_wrist_l"/>
+        <magnetometer name="head_mag" site="s_head"/>
+        <touch name="r_foot" site="r_foot_touch"/>
+        <touch name="r_toes" site="r_toes_touch"/>
+        <touch name="l_foot" site="l_foot_touch"/>
+        <touch name="l_toes" site="l_toes_touch"/>
+    </sensor>
+
+</mujocoinclude>

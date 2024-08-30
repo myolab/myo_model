@@ -1,0 +1,18 @@
+<!-- =================================================
+	Copyright 2024 MyoLab
+	License :: APGL
+====================================================== -->
+
+<mujoco model="MyoSuite: MyoSkeleton v0">
+
+	<include file="./assets/myoskeleton_assets.xml"/>
+	<include file="../scene/basic_scene.xml"/>
+
+	<worldbody>
+		<body name="myoskeleton_root" pos="0 0 .95">
+			<freejoint name="myoskeleton_root"/>
+			<include file="./assets/myoskeleton_chain.xml"/>
+		</body>
+	</worldbody>
+
+</mujoco>
