@@ -1,0 +1,56 @@
+<!--
+Copyright (c) 2026 MyoLab, Inc.
+
+Released under the MyoLab Non-Commercial Scientific Research License
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+You may not use this file except in compliance with the License.
+See the LICENSE file for governing permissions and limitations.
+-->
+
+<!--Summary: Markerset corresponding to the cmu mocap dataset: https://mocap.cs.cmu.edu/ -->
+
+<markers name="CMU" model="MyoSkeleton v1.0.0">
+    <marker body="pelvis" name="RBWT" pos="-0.154968 0.019202  0.033853" />
+    <marker body="pelvis" name="LBWT" pos="-0.154968 0.019202 -0.033853" />
+    <marker body="pelvis" name="RFWT" pos="0.018310 -0.000555  0.119647" />
+    <marker body="pelvis" name="LFWT" pos="0.018310 -0.000555 -0.119647" />
+    <marker body="thoracic_spine" name="STRN" pos="0.150000 0.080000 0.000000" />
+    <marker body="thoracic_spine" name="CLAV" pos="0.080000 0.250000 0.000000" />
+    <marker body="thoracic_spine" name="T10" pos="-0.070000 0.055000 -0.00000" />
+    <marker body="thoracic_spine" name="C7" pos="-0.050000 0.300000 0.000000" />
+    <marker body="skull" name="LFHD" pos="0.082576 0.081828 -0.053227" />
+    <marker body="skull" name="RBHD" pos="-0.081419 0.081548 0.055136" />
+    <marker body="skull" name="LBHD" pos="-0.081419 0.081548 -0.055136" />
+    <marker body="skull" name="RFHD" pos="0.082576 0.081828  0.053227" />
+    <marker body="scapula_r" name="RBAC" pos="-0.110000 0.000000 -0.080000" />
+    <marker body="scapula_r" name="RSHO" pos="-0.021106 0.020580  0.015862" />
+    <marker body="humerus_r" name="RUPA" pos="-0.002501 -0.079162 0.038639" />
+    <marker body="humerus_r" name="RELB" pos="-0.008819 -0.271070 0.043706" />
+    <marker body="radius_r" name="RFRM" pos="0.006309 -0.077908 0.037775" />
+    <marker body="radius_r" name="RWRA" pos="0.054005 -0.221352  0.030326" />
+    <marker body="ulna_r" name="RWRB" pos="-0.015533 -0.239806 0.055571" />
+    <marker body="lunate_r" name="RFIN" pos="0.004536 -0.110199 0.031305" />
+    <marker body="scapula_l" name="LSHO" pos="-0.021106 0.020580 -0.015862" />
+    <marker body="humerus_l" name="LUPA" pos="-0.002501 -0.179162 -0.034170" />
+    <marker body="humerus_l" name="LELB" pos="-0.008819 -0.271070 -0.043706" />
+    <marker body="radius_l" name="LFRM" pos="0.006233 -0.146570 -0.043057" />
+    <marker body="radius_l" name="LWRA" pos="0.054005 -0.221352 -0.030326" />
+    <marker body="ulna_l" name="LWRB" pos="-0.015533 -0.239806 -0.055571" />
+    <marker body="lunate_l" name="LFIN" pos="0.004536 -0.110199 -0.031305" />
+    <marker body="femur_r" name="RTHI" pos="0.009044 -0.167142 0.097284" />
+    <marker body="femur_r" name="RKNE" pos="0.009551 -0.407444 0.045628" />
+    <marker body="tibia_r" name="RSHN" pos="0.012646 -0.165298 0.061021" />
+    <marker body="tibia_r" name="RANK" pos="-0.009939 -0.389768 0.051116" />
+    <marker body="calcaneus_r" name="RHEE" pos="-0.023237 0.007973 0.004065" />
+    <marker body="calcaneus_r" name="RTOE" pos="0.185 0.022 -0.027" />
+    <marker body="calcaneus_r" name="RMT5" pos="0.15 0.018 0.043" />
+    <marker body="femur_l" name="LTHI" pos="0.009044 -0.267142 -0.084832" />
+    <marker body="femur_l" name="LKNE" pos="0.009551 -0.407444 -0.045628" />
+    <marker body="tibia_l" name="LSHN" pos="0.012646 -0.265298 -0.062027" />
+    <marker body="tibia_l" name="LANK" pos="-0.009939 -0.389768 -0.051116" />
+    <marker body="calcaneus_l" name="LHEE" pos="-0.023237 0.007973 0.004065" />
+    <marker body="calcaneus_l" name="LTOE" pos="0.185 0.022 0.027" />
+    <marker body="calcaneus_l" name="LMT5" pos="0.15 0.018 -0.043" />
+</markers>

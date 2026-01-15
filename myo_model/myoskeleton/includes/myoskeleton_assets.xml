@@ -1,0 +1,158 @@
+<!--
+Copyright (c) 2026 MyoLab, Inc.
+
+Released under the MyoLab Non-Commercial Scientific Research License
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+You may not use this file except in compliance with the License.
+See the LICENSE file for governing permissions and limitations.
+-->
+
+<!--Summary: MyoSkeleton assets definition. -->
+<mujocoinclude model="MyoSkeleton v2.0.0">
+    <compiler angle="radian" boundmass="0.001" boundinertia="0.001" />
+    <size njmax="1000" nconmax="400" nuser_jnt="1" />
+    <default>
+        <default class="myo">
+            <joint stiffness="2" limited="true" armature="0.02" damping="0.5" />
+            <geom contype="0" conaffinity="0" margin="0.001" rgba="0.8 0.8 0.8 1" />
+            <site size="0.001 0.005 0.005" group="3" />
+            <tendon limited="false" width="0.001" rgba="0.95 0.3 0.3 1" />
+            <default class="bone">
+                <geom type="mesh" group="1" rgba="0.89 0.85 0.98 1" />
+            </default>
+            <default class="motor">
+                <general gainprm="5" />
+            </default>
+            <default class="myo_sensor">
+                <site size="0.01 0.005 0.005" group="5" rgba="0.8 0.2 0.6 1" />
+            </default>
+            <default class="myo_marker">
+                <site size="0.01 0.005 0.005" group="4" rgba="0.8 0.2 0.6 1" />
+            </default>
+            <default class="myo_tracker">
+                <site size="0.01 0.005 0.005" group="4" rgba="0 1 0 1" />
+            </default>
+            <default class="myo_coll">
+                <geom type="capsule" contype="1" group="3" rgba="0.8 0.7 0.5 1" />
+            </default>
+            <default class="skin">
+                <geom type="capsule" contype="1" conaffinity="1" group="1" material="MatSkin" rgba="0.8 0.7 0.5 1" />
+            </default>
+            <default class="wrap">
+                <geom group="5" rgba="0.5 0.5 0.9 1" />
+            </default>
+        </default>
+    </default>
+    <asset>
+        <mesh name="pelvis_r" file="../myoskeleton/meshes/r_pelvis.stl" />
+        <mesh name="pelvis_l" file="../myoskeleton/meshes/l_pelvis.stl" />
+        <mesh name="sacrum_1" file="../myoskeleton/meshes/sacrum.stl" />
+        <mesh name="lumbar_spine_5" file="../myoskeleton/meshes/lumbar5.stl" scale="0.93 0.93 0.93" />
+        <mesh name="lumbar_spine_4" file="../myoskeleton/meshes/lumbar4.stl" scale="0.93 0.93 0.93" />
+        <mesh name="lumbar_spine_3" file="../myoskeleton/meshes/lumbar3.stl" scale="0.93 0.93 0.93" />
+        <mesh name="lumbar_spine_2" file="../myoskeleton/meshes/lumbar2.stl" scale="0.93 0.93 0.93" />
+        <mesh name="lumbar_spine_1" file="../myoskeleton/meshes/lumbar1.stl" scale="0.93 0.93 0.93" />
+        <mesh name="thoracic_spine_12" file="../myoskeleton/meshes/thoracic12_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_11" file="../myoskeleton/meshes/thoracic11_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_10" file="../myoskeleton/meshes/thoracic10_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_9" file="../myoskeleton/meshes/thoracic9_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_8" file="../myoskeleton/meshes/thoracic8_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_7" file="../myoskeleton/meshes/thoracic7_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_6" file="../myoskeleton/meshes/thoracic6_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_5" file="../myoskeleton/meshes/thoracic5_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_4" file="../myoskeleton/meshes/thoracic4_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_3" file="../myoskeleton/meshes/thoracic3_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_2" file="../myoskeleton/meshes/thoracic2_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thoracic_spine_1" file="../myoskeleton/meshes/thoracic1_s.stl" scale="0.89 0.89 0.89" />
+        <mesh name="thorax" file="../myoskeleton/meshes/thorax.stl" scale="1.014 1.014 1.014" />
+        <mesh name="cervical_spine_7" file="../myoskeleton/meshes/rotatedcerv7.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_6" file="../myoskeleton/meshes/cerv6.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_5" file="../myoskeleton/meshes/cerv5.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_4" file="../myoskeleton/meshes/cerv4.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_3" file="../myoskeleton/meshes/cerv3.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_2" file="../myoskeleton/meshes/cerv2.stl" scale="0.89 0.89 0.89" />
+        <mesh name="cervical_spine_1" file="../myoskeleton/meshes/cerv1.stl" scale="0.89 0.89 0.89" />
+        <mesh name="skull" file="../myoskeleton/meshes/skull.stl" scale="0.9 0.9 0.9" />
+        <mesh name="jaw" file="../myoskeleton/meshes/jaw.stl" scale="0.9 0.9 0.9" />
+        <mesh name="clavicle_r" file="../myoskeleton/meshes/clavicle.stl" />
+        <mesh name="scapula_r" file="../myoskeleton/meshes/scapula.stl" />
+        <mesh name="humerus_r" file="../myoskeleton/meshes/humerus_rv.stl" />
+        <mesh name="ulna_r" file="../myoskeleton/meshes/ulna.stl" />
+        <mesh name="radius_r" file="../myoskeleton/meshes/radius.stl" />
+        <mesh name="lunate_r" file="../myoskeleton/meshes/lunate.stl" />
+        <mesh name="scaphoid_r" file="../myoskeleton/meshes/scaphoid.stl" />
+        <mesh name="pisiform_r" file="../myoskeleton/meshes/pisiform.stl" />
+        <mesh name="triquetrum_r" file="../myoskeleton/meshes/triquetrum.stl" />
+        <mesh name="capitate_r" file="../myoskeleton/meshes/capitate.stl" />
+        <mesh name="trapezium_r" file="../myoskeleton/meshes/trapezium.stl" />
+        <mesh name="metacarpal_1_r" file="../myoskeleton/meshes/1mc.stl" />
+        <mesh name="proximal_phalanx_1_r" file="../myoskeleton/meshes/thumbprox.stl" />
+        <mesh name="distal_phalanx_1_r" file="../myoskeleton/meshes/thumbdist.stl" />
+        <mesh name="trapezoid_r" file="../myoskeleton/meshes/trapezoid.stl" />
+        <mesh name="hamate_r" file="../myoskeleton/meshes/hamate.stl" />
+        <mesh name="metacarpal_2_r" file="../myoskeleton/meshes/2mc.stl" />
+        <mesh name="proximal_phalanx_2_r" file="../myoskeleton/meshes/2proxph.stl" />
+        <mesh name="intermediate_phalanx_2_r" file="../myoskeleton/meshes/2midph.stl" />
+        <mesh name="distal_phalanx_2_r" file="../myoskeleton/meshes/2distph.stl" />
+        <mesh name="metacarpal_3_r" file="../myoskeleton/meshes/3mc.stl" />
+        <mesh name="proximal_phalanx_3_r" file="../myoskeleton/meshes/3proxph.stl" />
+        <mesh name="intermediate_phalanx_3_r" file="../myoskeleton/meshes/3midph.stl" />
+        <mesh name="distal_phalanx_3_r" file="../myoskeleton/meshes/3distph.stl" />
+        <mesh name="metacarpal_4_r" file="../myoskeleton/meshes/4mc.stl" />
+        <mesh name="proximal_phalanx_4_r" file="../myoskeleton/meshes/4proxph.stl" />
+        <mesh name="intermediate_phalanx_4_r" file="../myoskeleton/meshes/4midph.stl" />
+        <mesh name="distal_phalanx_4_r" file="../myoskeleton/meshes/4distph.stl" />
+        <mesh name="metacarpal_5_r" file="../myoskeleton/meshes/5mc.stl" />
+        <mesh name="proximal_phalanx_5_r" file="../myoskeleton/meshes/5proxph.stl" />
+        <mesh name="intermediate_phalanx_5_r" file="../myoskeleton/meshes/5midph.stl" />
+        <mesh name="distal_phalanx_5_r" file="../myoskeleton/meshes/5distph.stl" />
+        <mesh name="clavicle_l" file="../myoskeleton/meshes/clavicle_mirror.stl" />
+        <mesh name="scapula_l" file="../myoskeleton/meshes/scapula_mirror.stl" />
+        <mesh name="humerus_l" file="../myoskeleton/meshes/humerus_lv.stl" />
+        <mesh name="ulna_l" file="../myoskeleton/meshes/ulna_l.stl" />
+        <mesh name="radius_l" file="../myoskeleton/meshes/radius_l.stl" />
+        <mesh name="lunate_l" file="../myoskeleton/meshes/lunate_l.stl" />
+        <mesh name="scaphoid_l" file="../myoskeleton/meshes/scaphoid_l.stl" />
+        <mesh name="pisiform_l" file="../myoskeleton/meshes/pisiform_l.stl" />
+        <mesh name="triquetrum_l" file="../myoskeleton/meshes/triquetrum_l.stl" />
+        <mesh name="capitate_l" file="../myoskeleton/meshes/capitate_l.stl" />
+        <mesh name="trapezium_l" file="../myoskeleton/meshes/trapezium_l.stl" />
+        <mesh name="metacarpal_1_l" file="../myoskeleton/meshes/1mc_l.stl" />
+        <mesh name="proximal_phalanx_1_l" file="../myoskeleton/meshes/thumbprox_l.stl" />
+        <mesh name="distal_phalanx_1_l" file="../myoskeleton/meshes/thumbdist_l.stl" />
+        <mesh name="trapezoid_l" file="../myoskeleton/meshes/trapezoid_l.stl" />
+        <mesh name="hamate_l" file="../myoskeleton/meshes/hamate_l.stl" />
+        <mesh name="metacarpal_2_l" file="../myoskeleton/meshes/2mc_l.stl" />
+        <mesh name="proximal_phalanx_2_l" file="../myoskeleton/meshes/2proxph_l.stl" />
+        <mesh name="intermediate_phalanx_2_l" file="../myoskeleton/meshes/2midph_l.stl" />
+        <mesh name="distal_phalanx_2_l" file="../myoskeleton/meshes/2distph_l.stl" />
+        <mesh name="metacarpal_3_l" file="../myoskeleton/meshes/3mc_l.stl" />
+        <mesh name="proximal_phalanx_3_l" file="../myoskeleton/meshes/3proxph_l.stl" />
+        <mesh name="intermediate_phalanx_3_l" file="../myoskeleton/meshes/3midph_l.stl" />
+        <mesh name="distal_phalanx_3_l" file="../myoskeleton/meshes/3distph_l.stl" />
+        <mesh name="metacarpal_4_l" file="../myoskeleton/meshes/4mc_l.stl" />
+        <mesh name="proximal_phalanx_4_l" file="../myoskeleton/meshes/4proxph_l.stl" />
+        <mesh name="intermediate_phalanx_4_l" file="../myoskeleton/meshes/4midph_l.stl" />
+        <mesh name="distal_phalanx_4_l" file="../myoskeleton/meshes/4distph_l.stl" />
+        <mesh name="metacarpal_5_l" file="../myoskeleton/meshes/5mc_l.stl" />
+        <mesh name="proximal_phalanx_5_l" file="../myoskeleton/meshes/5proxph_l.stl" />
+        <mesh name="intermediate_phalanx_5_l" file="../myoskeleton/meshes/5midph_l.stl" />
+        <mesh name="distal_phalanx_5_l" file="../myoskeleton/meshes/5distph_l.stl" />
+        <mesh name="femur_r" file="../myoskeleton/meshes/r_femur.stl" />
+        <mesh name="tibia_r" file="../myoskeleton/meshes/r_tibia.stl" />
+        <mesh name="fibula_r" file="../myoskeleton/meshes/r_fibula.stl" />
+        <mesh name="talus_r" file="../myoskeleton/meshes/r_talus.stl" />
+        <mesh name="foot_r" file="../myoskeleton/meshes/r_foot.stl" />
+        <mesh name="toes_r" file="../myoskeleton/meshes/r_bofoot.stl" />
+        <mesh name="patella_r" file="../myoskeleton/meshes/r_patella.stl" />
+        <mesh name="femur_l" file="../myoskeleton/meshes/l_femur.stl" />
+        <mesh name="tibia_l" file="../myoskeleton/meshes/l_tibia.stl" />
+        <mesh name="fibula_l" file="../myoskeleton/meshes/l_fibula.stl" />
+        <mesh name="talus_l" file="../myoskeleton/meshes/l_talus.stl" />
+        <mesh name="foot_l" file="../myoskeleton/meshes/l_foot.stl" />
+        <mesh name="toes_l" file="../myoskeleton/meshes/l_bofoot.stl" />
+        <mesh name="patella_l" file="../myoskeleton/meshes/l_patella.stl" />
+    </asset>
+</mujocoinclude>

@@ -1,0 +1,467 @@
+<!--
+Copyright (c) 2026 MyoLab, Inc.
+
+Released under the MyoLab Non-Commercial Scientific Research License
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+You may not use this file except in compliance with the License.
+See the LICENSE file for governing permissions and limitations.
+-->
+
+<!--Summary: MyoSkeleton body chain definition. -->
+<mujocoinclude model="MyoSkeleton v2.0.0">
+    <body name="pelvis" childclass="myo" quat="0.5004 0.5 -0.5 -0.4996">
+        <inertial pos="-0.079196 -0.027496 5.0529e-07" quat="0.997841 9.78281e-06 7.01921e-06 0.0656721" mass="5.2478" diaginertia="0.050871 0.0449 0.027887" />
+        <geom name="pelvis_r" class="bone" mesh="pelvis_r" />
+        <geom name="pelvis_l" class="bone" mesh="pelvis_l" />
+        <geom name="sacrum_1" class="bone" pos="0.01 -0.017 0" quat="1 0 0 0" mesh="sacrum_1" />
+        <camera name="side_l" pos="0 0.5 3" quat="0.99875 -0.049979 0 0" mode="trackcom" />
+        <camera name="side_r" pos="0 0.5 -3" quat="0.00079533 3.98e-05 -0.99875 -0.049979" mode="trackcom" />
+        <body name="lumbar_spine_5" pos="-0.088 0.054 0">
+            <inertial pos="0.01728 0.0183 0" mass="1.824" diaginertia="0.001 0.001 0.001" />
+            <joint name="l5_s1_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.152 0.044" damping="10" />
+            <joint name="l5_s1_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.06 0.06" damping="10" />
+            <joint name="l5_s1_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.028 0.028" damping="10" />
+            <geom name="lumbar_spine_5" class="bone" mesh="lumbar_spine_5" />
+            <body name="lumbar_spine_4" pos="0.009 0.0321 0">
+                <inertial pos="0.0186 0.021795 0" mass="1.799" diaginertia="0.001 0.001 0.001" />
+                <joint name="l4_l5_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.226 0.065" />
+                <joint name="l4_l5_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.08 0.08" />
+                <joint name="l4_l5_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.03 0.03" />
+                <geom name="lumbar_spine_4" class="bone" mesh="lumbar_spine_4" />
+                <body name="lumbar_spine_3" pos="0.0006 0.0332 0">
+                    <inertial pos="0.017894 0.023274 0" mass="1.67" diaginertia="0.001 0.001 0.001" />
+                    <joint name="l3_l4_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.249 0.071" />
+                    <joint name="l3_l4_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.108 0.108" />
+                    <joint name="l3_l4_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.03 0.03" />
+                    <geom name="lumbar_spine_3" class="bone" mesh="lumbar_spine_3" />
+                    <body name="lumbar_spine_2" pos="-0.0067 0.0351 0">
+                        <inertial pos="0.025246 0.020212 0" mass="1.689" diaginertia="0.001 0.001 0.001" />
+                        <joint name="l2_l3_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.282 0.0081" />
+                        <joint name="l2_l3_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.11 0.11" />
+                        <joint name="l2_l3_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.024 0.024" />
+                        <geom name="lumbar_spine_2" class="bone" mesh="lumbar_spine_2" />
+                        <body name="lumbar_spine_1" pos="-0.0114 0.0288 0">
+                            <inertial pos="0.03274 0.019407 0.0013289" mass="1.677" diaginertia="0.001 0.001 0.001" />
+                            <joint name="l1_l2_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.311 0.089" />
+                            <joint name="l1_l2_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.083 0.083" />
+                            <joint name="l1_l2_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.023 0.023" />
+                            <geom name="lumbar_spine_1" class="bone" mesh="lumbar_spine_1" />
+                            <body name="thoracic_spine" pos="-0.03 0.0331 0">
+                                <inertial pos="0.033036 0.10821 0.00021208" quat="0.704063 0.704923 0.0607763 0.0606943" mass="39.406" diaginertia="0.63962 0.46398 0.35891" />
+                                <joint name="t12_l1_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.112 0.036" damping="10" />
+                                <joint name="t12_l1_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.061 0.061" damping="10" />
+                                <joint name="t12_l1_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.646 0.646" damping="10" />
+                                <geom name="thoracic_spine_12" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_12" />
+                                <geom name="thoracic_spine_11" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_11" />
+                                <geom name="thoracic_spine_10" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_10" />
+                                <geom name="thoracic_spine_9" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_9" />
+                                <geom name="thoracic_spine_8" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_8" />
+                                <geom name="thoracic_spine_7" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_7" />
+                                <geom name="thoracic_spine_6" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_6" />
+                                <geom name="thoracic_spine_5" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_5" />
+                                <geom name="thoracic_spine_4" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_4" />
+                                <geom name="thoracic_spine_3" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_3" />
+                                <geom name="thoracic_spine_2" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_2" />
+                                <geom name="thoracic_spine_1" class="bone" pos="0.0335 -0.12 0" quat="1 0 0 0" mesh="thoracic_spine_1" />
+                                <geom name="thorax" class="bone" pos="0.055 0.252 0" mesh="thorax" />
+                                <body name="cervical_spine_7" pos="0.00516 0.287 0">
+                                    <inertial pos="-0.0002 0.0071 0" mass="0.58408" diaginertia="0.001 0.001 0.001" />
+                                    <joint name="c7_t1_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.05702 0.08294" />
+                                    <joint name="c7_t1_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.085 0.085" />
+                                    <joint name="c7_t1_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.063 0.063" />
+                                    <geom name="cervical_spine_7" class="bone" mesh="cervical_spine_7" />
+                                    <body name="cervical_spine_6" pos="0.003837 0.01645 0">
+                                        <inertial pos="0.0002 0.0064 0" mass="0.50775" diaginertia="0.001 0.001 0.001" />
+                                        <joint name="c6_c7_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                        <joint name="c6_c7_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.125 0.125" />
+                                        <joint name="c6_c7_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.101 0.101" />
+                                        <geom name="cervical_spine_6" class="bone" mesh="cervical_spine_6" />
+                                        <body name="cervical_spine_5" pos="0.00418 0.0179 0">
+                                            <inertial pos="0.0001 0.0063 0" mass="0.4291" diaginertia="0.001 0.001 0.001" />
+                                            <joint name="c5_c6_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                            <joint name="c5_c6_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.143 0.143" />
+                                            <joint name="c5_c6_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.161 0.161" />
+                                            <geom name="cervical_spine_5" class="bone" mesh="cervical_spine_5" />
+                                            <body name="cervical_spine_4" pos="0.00341 0.01917 0">
+                                                <inertial pos="-0.0003 0.0067 0" mass="0.42332" diaginertia="0.001 0.001 0.001" />
+                                                <joint name="c4_c5_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                                <joint name="c4_c5_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.146 0.146" />
+                                                <joint name="c4_c5_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.18 0.18" />
+                                                <geom name="cervical_spine_4" class="bone" mesh="cervical_spine_4" />
+                                                <body name="cervical_spine_3" pos="0.00261 0.0154 0">
+                                                    <inertial pos="-0.0008 0.0071 0" mass="0.41985" diaginertia="0.001 0.001 0.001" />
+                                                    <joint name="c3_c4_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                                    <joint name="c3_c4_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.125 0.125" />
+                                                    <joint name="c3_c4_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.168 0.168" />
+                                                    <geom name="cervical_spine_3" class="bone" mesh="cervical_spine_3" />
+                                                    <body name="cervical_spine_2" pos="-0.00018 0.01629 0">
+                                                        <inertial pos="-0.001 0.0059 0" mass="0.58755" diaginertia="0.001 0.001 0.001" />
+                                                        <joint name="c2_c3_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                                        <joint name="c2_c3_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.105 0.105" />
+                                                        <joint name="c2_c3_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.105 0.105" />
+                                                        <geom name="cervical_spine_2" class="bone" mesh="cervical_spine_2" />
+                                                        <body name="cervical_spine_1" pos="0 0.01776 0">
+                                                            <inertial pos="0.0312 0.0019 0" mass="0.46727" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="c1_c2_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.124 0.186" />
+                                                            <joint name="c1_c2_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.07 0.07" />
+                                                            <joint name="c1_c2_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.663 0.663" />
+                                                            <geom name="cervical_spine_1" class="bone" pos="-0.03556 0 0" quat="1 0 0 0" mesh="cervical_spine_1" />
+                                                            <body name="skull" pos="0.00779 0.01492 0">
+                                                                <inertial pos="0.0090021 0.056204 8.0657e-07" quat="0.283231 0.647941 -0.283131 0.647911" mass="9.6351" diaginertia="0.04225 0.040943 0.030665" />
+                                                                <joint name="occ_c1_flex" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.155 0.233" />
+                                                                <joint name="occ_c1_bend" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.052 0.052" />
+                                                                <joint name="occ_c1_arot" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.044 0.044" />
+                                                                <geom name="skull" class="bone" mesh="skull" />
+                                                                <geom name="jaw" class="bone" mesh="jaw" />
+                                                            </body>
+                                                        </body>
+                                                    </body>
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                                <body name="clavicle_r" pos="0.058335 0.25693 0.025465">
+                                    <inertial pos="-0.011096 0.0063723 0.054168" mass="0.156" diaginertia="0.001 0.001 0.001" />
+                                    <joint name="clav_prot_r" pos="0 0 0" axis="0.01499 0.989333 -0.1449" stiffness="20" range="-0.31 0.31" />
+                                    <joint name="clav_elev_r" pos="0 0 0" axis="-0.994467 0 -0.10505" stiffness="20" range="0 0.82" />
+                                    <geom name="clavicle_r" class="bone" mesh="clavicle_r" />
+                                    <body name="scapula_r" pos="-0.01433 0.02007 0.13553">
+                                        <inertial pos="-0.054694 -0.035032 -0.043734" quat="0.453021 0.779211 0.0744131 0.426691" mass="0.70396" diaginertia="0.001 0.001 0.001" />
+                                        <geom name="scapula_r" class="bone" mesh="scapula_r" />
+                                        <body name="humerus_r" pos="-0.00955 -0.034 0.009">
+                                            <inertial pos="0.00090851 -0.13105 -0.00025312" quat="0.651031 0.650551 -0.275431 0.277631" mass="2.1135" diaginertia="0.021334 0.02133 0.0016381" />
+                                            <joint name="shoulder_r" pos="0 0 0" type="ball" stiffness="5" limited="false" actuatorfrclimited="false" damping="5" />
+                                            <geom name="humerus_r" class="bone" mesh="humerus_r" />
+                                            <body name="ulna_r" pos="0.0121 -0.2854 -0.0023">
+                                                <inertial pos="-0.0077773 -0.093976 0.02066" quat="0.651662 0.572162 -0.282981 0.409742" mass="0.23659" diaginertia="0.0011977 0.0011955 0.001" />
+                                                <joint name="elbow_flex_r" pos="0 0 0" axis="0.225969 0.0219969 0.973886" stiffness="20" range="0 2.618" damping="5" />
+                                                <geom name="ulna_r" class="bone" mesh="ulna_r" />
+                                                <body name="radius_r" pos="0.0004 -0.011503 0.019999">
+                                                    <inertial pos="0.0097074 -0.11983 0.011766" quat="0.499911 0.476061 -0.459961 0.558471" mass="1.5513" diaginertia="0.01011 0.010055 0.001" />
+                                                    <joint name="wrist_pron_r" pos="0 0 0" axis="-0.017011 0.99262 -0.12007" stiffness="20" range="-1.571 1.771" />
+                                                    <geom name="radius_r" class="bone" mesh="radius_r" />
+                                                    <camera name="hand_top" pos="0.02 -0.2 0.55" />
+                                                    <camera name="hand_bottom" pos="0.02 -0.2 -0.55" quat="0.00079633 0 1 0" />
+                                                    <camera name="hand_side_inter" pos="0.5 -0.3 0" quat="0.5004 0.5 0.5 0.4996" />
+                                                    <camera name="hand_side_exter" pos="-0.5 -0.3 0" quat="0.5004 0.5 -0.5 -0.4996" />
+                                                    <body name="lunate_r" pos="0.018 -0.242 0.025">
+                                                        <inertial pos="0 0 0" mass="0.02" diaginertia="0.001 0.001 0.001" />
+                                                        <joint name="wrist_devi_r" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.175 0.436" />
+                                                        <joint name="wrist_flex_r" pos="0 0 0" axis="1 0 0" stiffness="20" range="-0.785 0.785" />
+                                                        <geom name="lunate_r" class="bone" mesh="lunate_r" />
+                                                        <geom name="scaphoid_r" class="bone" pos="0.012345 -0.004464 -0.001254" mesh="scaphoid_r" />
+                                                        <geom name="pisiform_r" class="bone" pos="-0.013388 -0.009886 -0.010593" quat="1 0 0 0" mesh="pisiform_r" />
+                                                        <geom name="triquetrum_r" class="bone" pos="-0.010784 -0.007499 -0.001289" quat="1 0 0 0" mesh="triquetrum_r" />
+                                                        <geom name="capitate_r" class="bone" pos="0.003992 -0.015054 0.002327" quat="1 0 0 0" mesh="capitate_r" />
+                                                        <geom name="trapezium_r" class="bone" pos="0.019285 -0.019623 -0.007981" quat="1 0 0 0" mesh="trapezium_r" />
+                                                        <geom name="trapezoid_r" class="bone" pos="0.013135 -0.019116 -0.000137" mesh="trapezoid_r" />
+                                                        <geom name="hamate_r" class="bone" pos="-0.006977 -0.017549 0.001577" quat="1 0 0 0" mesh="hamate_r" />
+                                                        <geom name="metacarpal_2_r" class="bone" pos="0.018677 -0.052674 0.007359" quat="1 0 0 0" mesh="metacarpal_2_r" />
+                                                        <geom name="metacarpal_3_r" class="bone" pos="0.004469 -0.054293 0.009704" quat="1 0 0 0" mesh="metacarpal_3_r" />
+                                                        <geom name="metacarpal_4_r" class="bone" pos="-0.008054 -0.055573 0.00584" quat="1 0 0 0" mesh="metacarpal_4_r" />
+                                                        <geom name="metacarpal_5_r" class="bone" pos="-0.017904 -0.049737 -0.001891" quat="1 0 0 0" mesh="metacarpal_5_r" />
+                                                        <body name="metacarpal_1_r" pos="0.026485 -0.025023 -0.010481">
+                                                            <inertial pos="0.0075906 -0.012953 -0.0050138" quat="0.280851 0.716582 -0.420451 0.480472" mass="0.018795" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="cmc_flex_r" pos="0 0 0" axis="-0.0420209 -0.665328 0.745368" stiffness="20" range="-0.5 0.78" />
+                                                            <joint name="cmc_abdu_r" pos="0 0 0" axis="0.49579 0.73168 0.4678" stiffness="20" range="-0.78 0.7" />
+                                                            <geom name="metacarpal_1_r" class="bone" mesh="metacarpal_1_r" />
+                                                            <body name="proximal_phalanx_1_r" pos="0.0165 -0.0292 -0.0127">
+                                                                <inertial pos="0.0072172 -0.013249 -0.0051307" quat="0.538979 0.808359 0.0902979 0.21887" mass="0.011211" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="mp_flex_r" pos="0 0 0" axis="-0.0840472 -0.20311 0.975542" stiffness="20" range="-0.785 0.698" />
+                                                                <geom name="proximal_phalanx_1_r" class="bone" mesh="proximal_phalanx_1_r" />
+                                                                <body name="distal_phalanx_1_r" pos="0.014 -0.0259 -0.0101">
+                                                                    <inertial pos="0.005612 -0.0096163 -0.0037474" quat="0.24721 0.679429 -0.44163 0.53125" mass="0.0047639" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="ip_flex_r" pos="0 0 0" axis="-0.0499931 -0.479931 0.875881" stiffness="20" range="-1.309 0.436" />
+                                                                    <geom name="distal_phalanx_1_r" class="bone" mesh="distal_phalanx_1_r" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_2_r" pos="0.022178 -0.080917 0.010979">
+                                                            <inertial pos="0.004039 -0.021201 0.0037678" quat="0.563208 0.557658 -0.356159 0.494939" mass="0.015411" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp2_flex_r" pos="0 0 0" axis="0.995087 0.0990087 0" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp2_abdu_r" pos="0 0 0" axis="-0.0549329 0.0858949 0.994789" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_2_r" class="bone" mesh="proximal_phalanx_2_r" />
+                                                            <body name="intermediate_phalanx_2_r" pos="0.00751 -0.041273 0.007326">
+                                                                <inertial pos="0.0013362 -0.012137 3.2661e-05" quat="0.530981 0.555091 -0.39531 0.503651" mass="0.007615" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm2_flex_r" pos="0 0 0" axis="0.975082 0.10001 -0.198021" stiffness="20" range="0 1.571" />
+                                                                <geom name="intermediate_phalanx_2_r" class="bone" mesh="intermediate_phalanx_2_r" />
+                                                                <body name="distal_phalanx_2_r" pos="0.003333 -0.024888 0.00122">
+                                                                    <inertial pos="0.0011542 -0.0087781 0.00042907" quat="0.754611 0.649731 0.0914122 0.00738681" mass="0.0044351" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md2_flex_r" pos="0 0 0" axis="0.994988 0.0999988 0" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_2_r" class="bone" mesh="distal_phalanx_2_r" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_3_r" pos="0.004709 -0.080583 0.011482">
+                                                            <inertial pos="0.0010101 -0.022178 0.0040704" quat="0.536048 0.516308 -0.442379 0.500379" mass="0.016531" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp3_flex_r" pos="0 0 0" axis="0.98 0 0.199" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp3_abdu_r" pos="0 0 0" axis="-0.199 0 0.98" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_3_r" class="bone" mesh="proximal_phalanx_3_r" />
+                                                            <body name="intermediate_phalanx_3_r" pos="0.00165 -0.044211 0.00623">
+                                                                <inertial pos="0.0011499 -0.014085 0.00015332" quat="0.626692 0.630932 -0.300261 0.345001" mass="0.0086054" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm3_flex_r" pos="0 0 0" axis="1 0 0" stiffness="20" range="0 1.5708" />
+                                                                <geom name="intermediate_phalanx_3_r" class="bone" mesh="intermediate_phalanx_3_r" />
+                                                                <body name="distal_phalanx_3_r" pos="0.001365 -0.029047 0.001954">
+                                                                    <inertial pos="0.0013202 -0.0097919 -0.0014838" quat="0.725013 0.688193 0.0231661 0.0144571" mass="0.0045165" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md3_flex_r" pos="0 0 0" axis="1 0 0" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_3_r" class="bone" mesh="distal_phalanx_3_r" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_4_r" pos="-0.009884 -0.079262 0.005667">
+                                                            <inertial pos="-0.0011554 -0.02022 0.00087359" quat="0.480868 0.434018 -0.556118 0.520698" mass="0.012469" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp4_flex_r" pos="0 0 0" axis="0.900349 0 0.435169" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp4_abdu_r" pos="0 0 0" axis="-0.435169 0 0.900349" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_4_r" class="bone" mesh="proximal_phalanx_4_r" />
+                                                            <body name="intermediate_phalanx_4_r" pos="-0.003528 -0.040255 0.001345">
+                                                                <inertial pos="-0.00016914 -0.012117 -0.00083211" quat="0.633732 0.608712 -0.362651 0.310381" mass="0.0059237" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm4_flex_r" pos="0 0 0" axis="0.9212 0 0.38909" stiffness="20" range="0 1.5708" />
+                                                                <geom name="intermediate_phalanx_4_r" class="bone" mesh="intermediate_phalanx_4_r" />
+                                                                <body name="distal_phalanx_4_r" pos="-0.002317 -0.024789 0.000563">
+                                                                    <inertial pos="-0.0003526 -0.010664 -0.0014484" quat="0.712863 0.656653 -0.213611 0.122491" mass="0.0041836" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md4_flex_r" pos="0 0 0" axis="0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_4_r" class="bone" mesh="distal_phalanx_4_r" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_5_r" pos="-0.019501 -0.071168 -0.003387">
+                                                            <inertial pos="-0.003041 -0.018177 -0.0018919" quat="0.6305 0.72155 0.17628 -0.2253" mass="0.0099076" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp5_flex_r" pos="0 0 0" axis="0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp5_abdu_r" pos="0 0 0" axis="-0.565042 0 0.825062" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_5_r" class="bone" mesh="proximal_phalanx_5_r" />
+                                                            <body name="intermediate_phalanx_5_r" pos="-0.005279 -0.035563 -0.002879">
+                                                                <inertial pos="-0.0010606 -0.011076 -0.0023855" quat="0.645061 0.735091 0.1085 -0.17823" mass="0.0046675" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm5_flex_r" pos="0 0 0" axis="0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                                <geom name="intermediate_phalanx_5_r" class="bone" mesh="intermediate_phalanx_5_r" />
+                                                                <body name="distal_phalanx_5_r" pos="-0.002871 -0.020677 -0.002243">
+                                                                    <inertial pos="-0.00062962 -0.0096463 -0.0017779" quat="0.639333 0.601823 -0.391732 0.274971" mass="0.0028694" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md5_flex_r" pos="0 0 0" axis="0.643211 -0.22708 0.731241" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_5_r" class="bone" mesh="distal_phalanx_5_r" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                    </body>
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                                <body name="clavicle_l" pos="0.058335 0.25693 -0.025465">
+                                    <inertial pos="-0.011096 0.0063723 -0.054168" mass="0.156" diaginertia="0.001 0.001 0.001" />
+                                    <joint name="clav_prot_l" pos="0 0 0" axis="-0.01499 -0.989333 -0.1449" stiffness="20" range="-0.31 0.31" />
+                                    <joint name="clav_elev_l" pos="0 0 0" axis="0.994467 0 -0.10505" stiffness="20" range="0 0.82" />
+                                    <geom name="clavicle_l" class="bone" mesh="clavicle_l" />
+                                    <body name="scapula_l" pos="-0.01433 0.02007 -0.13553">
+                                        <inertial pos="-0.054694 -0.035032 0.043734" quat="0.453021 0.779211 0.0744131 0.426691" mass="0.70396" diaginertia="0.001 0.001 0.001" />
+                                        <geom name="scapula_l" class="bone" mesh="scapula_l" />
+                                        <body name="humerus_l" pos="-0.00955 -0.034 -0.009">
+                                            <inertial pos="0.00090851 -0.13105 0.00025312" quat="0.275491 0.277711 -0.651012 0.650512" mass="2.1135" diaginertia="0.021334 0.02133 0.0016381" />
+                                            <joint name="shoulder_l" pos="0 0 0" type="ball" stiffness="5" limited="false" actuatorfrclimited="false" damping="5" />
+                                            <geom name="humerus_l" class="bone" mesh="humerus_l" />
+                                            <body name="ulna_l" pos="0.0121 -0.2854 0.0023">
+                                                <inertial pos="-0.0077446 -0.094239 -0.020616" quat="0.27955 0.405441 -0.654211 0.574001" mass="0.24008" diaginertia="0.0012208 0.0012186 0.001" />
+                                                <joint name="elbow_flex_l" pos="0 0 0" axis="-0.225969 -0.0219969 0.973886" stiffness="20" range="0 2.618" damping="5" />
+                                                <geom name="ulna_l" class="bone" mesh="ulna_l" />
+                                                <body name="radius_l" pos="0.0004 -0.0115 -0.02">
+                                                    <inertial pos="0.0097711 -0.12014 -0.011795" quat="0.459429 0.558009 -0.500329 0.476679" mass="1.5645" diaginertia="0.010194 0.010139 0.001" />
+                                                    <joint name="wrist_pron_l" pos="0 0 0" axis="0.017011 -0.99262 -0.12007" stiffness="20" range="-1.571 1.771" />
+                                                    <geom name="radius_l" class="bone" mesh="radius_l" />
+                                                    <body name="lunate_l" pos="0.018 -0.242 -0.025">
+                                                        <inertial pos="0 0 0" mass="0.02" diaginertia="0.001 0.001 0.001" />
+                                                        <joint name="wrist_devi_l" pos="0 0 0" axis="0 0 1" stiffness="20" range="-0.175 0.436" />
+                                                        <joint name="wrist_flex_l" pos="0 0 0" axis="-1 0 0" stiffness="20" range="-0.785 0.785" />
+                                                        <geom name="lunate_l" class="bone" mesh="lunate_l" />
+                                                        <geom name="scaphoid_l" class="bone" pos="0.012345 -0.004464 0.001254" mesh="scaphoid_l" />
+                                                        <geom name="pisiform_l" class="bone" pos="-0.013388 -0.009886 0.010593" quat="1 0 0 0" mesh="pisiform_l" />
+                                                        <geom name="triquetrum_l" class="bone" pos="-0.010784 -0.007499 0.001289" quat="1 0 0 0" mesh="triquetrum_l" />
+                                                        <geom name="capitate_l" class="bone" pos="0.003992 -0.015054 -0.002327" quat="1 0 0 0" mesh="capitate_l" />
+                                                        <geom name="trapezium_l" class="bone" pos="0.019285 -0.019623 0.007981" quat="1 0 0 0" mesh="trapezium_l" />
+                                                        <geom name="trapezoid_l" class="bone" pos="0.013135 -0.019116 0.000137" mesh="trapezoid_l" />
+                                                        <geom name="hamate_l" class="bone" pos="-0.006977 -0.017549 -0.001577" quat="1 0 0 0" mesh="hamate_l" />
+                                                        <geom name="metacarpal_2_l" class="bone" pos="0.019786 -0.055516 -0.0077391" quat="1 0 0 0" mesh="metacarpal_2_l" />
+                                                        <geom name="metacarpal_3_l" class="bone" pos="0.004505 -0.057257 -0.010261" quat="1 0 0 0" mesh="metacarpal_3_l" />
+                                                        <geom name="metacarpal_4_l" class="bone" pos="-0.008964 -0.058634 -0.0061054" quat="1 0 0 0" mesh="metacarpal_4_l" />
+                                                        <geom name="metacarpal_5_l" class="bone" pos="-0.019558 -0.052357 0.0022096" quat="1 0 0 0" mesh="metacarpal_5_l" />
+                                                        <body name="metacarpal_1_l" pos="0.02591 -0.024592 0.010281">
+                                                            <inertial pos="0.0075906 -0.012953 0.0050138" quat="0.42045 0.48047 -0.28089 0.71657" mass="0.018795" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="cmc_flex_l" pos="0 0 0" axis="0.0420209 0.665328 0.745368" stiffness="20" range="-0.5 0.78" />
+                                                            <joint name="cmc_abdu_l" pos="0 0 0" axis="-0.49579 -0.73168 0.4678" stiffness="20" range="-0.78 0.7" />
+                                                            <geom name="metacarpal_1_l" class="bone" mesh="metacarpal_1_l" />
+                                                            <body name="proximal_phalanx_1_l" pos="0.0165 -0.0292 0.0127">
+                                                                <inertial pos="0.0072172 -0.013249 0.0051307" quat="0.808339 0.538999 0.2189 0.0902839" mass="0.01121" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="mp_flex_l" pos="0 0 0" axis="0.0840472 0.20311 0.975542" stiffness="20" range="-0.785 0.698" />
+                                                                <geom name="proximal_phalanx_1_l" class="bone" mesh="proximal_phalanx_1_l" />
+                                                                <body name="distal_phalanx_1_l" pos="0.014 -0.0259 0.0101">
+                                                                    <inertial pos="0.0056122 -0.0096165 0.0037475" quat="0.441689 0.531278 -0.247129 0.679398" mass="0.0047628" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="ip_flex_l" pos="0 0 0" axis="0.0499931 0.479931 0.875881" stiffness="20" range="-1.309 0.436" />
+                                                                    <geom name="distal_phalanx_1_l" class="bone" mesh="distal_phalanx_1_l" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_2_l" pos="0.023287 -0.083759 -0.011359">
+                                                            <inertial pos="0.004039 -0.021201 -0.0037678" quat="0.35609 0.494881 -0.563241 0.557721" mass="0.015411" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp2_flex_l" pos="0 0 0" axis="-0.995087 -0.0990087 0" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp2_abdu_l" pos="0 0 0" axis="0.0549329 -0.0858949 0.994789" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_2_l" class="bone" mesh="proximal_phalanx_2_l" />
+                                                            <body name="intermediate_phalanx_2_l" pos="0.007517 -0.041273 -0.007326">
+                                                                <inertial pos="0.0013362 -0.012137 -3.2661e-05" quat="0.395329 0.503618 -0.530958 0.555128" mass="0.007615" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm2_flex_l" pos="0 0 0" axis="-0.975082 -0.10001 -0.198021" stiffness="20" range="0 1.571" />
+                                                                <geom name="intermediate_phalanx_2_l" class="bone" mesh="intermediate_phalanx_2_l" />
+                                                                <body name="distal_phalanx_2_l" pos="0.003333 -0.024888 -0.00122">
+                                                                    <inertial pos="0.0011542 -0.0087781 -0.00042907" quat="0.64977 0.75458 0.0074161 0.091397" mass="0.0044351" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md2_flex_l" pos="0 0 0" axis="-0.994988 -0.0999988 0" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_2_l" class="bone" mesh="distal_phalanx_2_l" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_3_l" pos="0.004745 -0.083547 -0.012039">
+                                                            <inertial pos="0.0010101 -0.022178 -0.0040704" quat="0.44237 0.50036 -0.536061 0.516321" mass="0.016531" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp3_flex_l" pos="0 0 0" axis="-0.98 0 0.199" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp3_abdu_l" pos="0 0 0" axis="0.199 0 0.98" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_3_l" class="bone" mesh="proximal_phalanx_3_l" />
+                                                            <body name="intermediate_phalanx_3_l" pos="0.00165 -0.044211 -0.00623">
+                                                                <inertial pos="0.0011499 -0.014085 -0.00015332" quat="0.300229 0.344929 -0.626699 0.630979" mass="0.0086054" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm3_flex_l" pos="0 0 0" axis="-1 0 0" stiffness="20" range="0 1.5708" />
+                                                                <geom name="intermediate_phalanx_3_l" class="bone" mesh="intermediate_phalanx_3_l" />
+                                                                <body name="distal_phalanx_3_l" pos="0.001365 -0.029047 -0.001954">
+                                                                    <inertial pos="0.0013202 -0.0097919 0.0014838" quat="0.688178 0.725028 0.014462 0.0231629" mass="0.0045165" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md3_flex_l" pos="0 0 0" axis="-1 0 0" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_3_l" class="bone" mesh="distal_phalanx_3_l" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_4_l" pos="-0.010794 -0.082323 -0.0059324" quat="0.988771 0.010452 -0.14907 0">
+                                                            <inertial pos="-0.0011554 -0.02022 -0.00087359" quat="0.556131 0.520671 -0.480861 0.434041" mass="0.012469" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp4_flex_l" pos="0 0 0" axis="-0.900349 0 0.435169" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp4_abdu_l" pos="0 0 0" axis="0.435169 0 0.900349" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_4_l" class="bone" mesh="proximal_phalanx_4_l" />
+                                                            <body name="intermediate_phalanx_4_l" pos="-0.003528 -0.040255 -0.001345">
+                                                                <inertial pos="-0.00016914 -0.012117 0.00083211" quat="0.362658 0.310378 -0.633736 0.608706" mass="0.0059237" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm4_flex_l" pos="0 0 0" axis="-0.9212 0 0.38909" stiffness="20" range="0 1.5708" />
+                                                                <geom name="intermediate_phalanx_4_l" class="bone" mesh="intermediate_phalanx_4_l" />
+                                                                <body name="distal_phalanx_4_l" pos="-0.002317 -0.024789 -0.000563">
+                                                                    <inertial pos="-0.0003526 -0.010664 0.0014484" quat="0.656689 0.712839 0.12246 -0.2136" mass="0.0041836" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md4_flex_l" pos="0 0 0" axis="-0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_4_l" class="bone" mesh="distal_phalanx_4_l" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                        <body name="proximal_phalanx_5_l" pos="-0.021155 -0.073788 0.0037057" quat="0.988771 0.022332 -0.14776 0">
+                                                            <inertial pos="-0.003041 -0.018177 0.0018919" quat="0.72157 0.63049 -0.22528 0.17626" mass="0.0099076" diaginertia="0.001 0.001 0.001" />
+                                                            <joint name="mcp5_flex_l" pos="0 0 0" axis="-0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                            <joint name="mcp5_abdu_l" pos="0 0 0" axis="0.565042 0 0.825062" stiffness="20" range="-0.262 0.262" />
+                                                            <geom name="proximal_phalanx_5_l" class="bone" mesh="proximal_phalanx_5_l" />
+                                                            <body name="intermediate_phalanx_5_l" pos="-0.005279 -0.035563 0.002879">
+                                                                <inertial pos="-0.0010606 -0.011076 0.0023855" quat="0.735061 0.645081 -0.17826 0.10853" mass="0.0046675" diaginertia="0.001 0.001 0.001" />
+                                                                <joint name="pm5_flex_l" pos="0 0 0" axis="-0.825062 0 0.565042" stiffness="20" range="0 1.571" />
+                                                                <geom name="intermediate_phalanx_5_l" class="bone" mesh="intermediate_phalanx_5_l" />
+                                                                <body name="distal_phalanx_5_l" pos="-0.002871 -0.020677 0.002243">
+                                                                    <inertial pos="-0.00062966 -0.0096463 0.0017779" quat="0.391751 0.274991 -0.639332 0.601802" mass="0.0028695" diaginertia="0.001 0.001 0.001" />
+                                                                    <joint name="md5_flex_l" pos="0 0 0" axis="-0.643211 0.22708 0.731241" stiffness="20" range="0 1.571" />
+                                                                    <geom name="distal_phalanx_5_l" class="bone" mesh="distal_phalanx_5_l" />
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                    </body>
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+        <body name="abdomen" pos="0.002 0.144 0">
+            <inertial pos="0.008 0 0" mass="0.001" diaginertia="0.001 0.001 0.001" />
+            <joint name="abs_tx" pos="0 0 0" axis="1 0 0" type="slide" stiffness="20" limited="false" range="-0.001 0.001" />
+            <joint name="abs_ty" pos="0 0 0" axis="0 1 0" type="slide" stiffness="20" limited="false" range="-0.001 0.001" />
+            <joint name="abs_rz" pos="0 0 0" axis="0 0 1" stiffness="20" limited="false" range="-0.07 0.07" />
+            <joint name="abs_ry" pos="0 0 0" axis="1 0 0" stiffness="20" limited="false" range="-0.07 0.07" />
+            <joint name="abs_rx" pos="0 0 0" axis="0 1 0" stiffness="20" limited="false" range="-0.07 0.07" />
+        </body>
+        <body name="femur_r" pos="-0.056276 -0.07849 0.07726">
+            <inertial pos="0 -0.195 -0.0005" quat="0.708011 -0.706201 0 0" mass="8.4" diaginertia="0.1694 0.1694 0.024527" />
+            <joint name="hip_flex_r" pos="0 0 0" axis="0 0 1" stiffness="20" range="-1.57 2.094" damping="8" />
+            <joint name="hip_abdu_r" pos="0 0 0" axis="1 0 0" stiffness="20" range="-1.57 0.524" damping="8" />
+            <joint name="hip_arot_r" pos="0 0 0" axis="0 1 0" stiffness="20" range="-0.698 0.698" damping="8" />
+            <geom name="femur_r" class="bone" mesh="femur_r" />
+            <body name="tibia_r" pos="-4.6e-07 -0.40442 -0.0012653">
+                <inertial pos="-0.005 -0.175 0.0025" quat="0.702039 -0.711848 0.020339 0" mass="3.8" diaginertia="0.077159 0.077159 0.0069039" />
+                <joint name="tibia_tx_r" pos="0 0 0" axis="0.992238 0.12403 -0.00900218" type="slide" stiffness="20" range="0 0.007" />
+                <joint name="tibia_ty_r" pos="0 0 0" axis="-0.1241 0.989794 -0.0700562" type="slide" stiffness="20" range="0 0.002" />
+                <joint name="knee_flex_r" pos="0 0 0" axis="0 -0.0710343 -0.997474" stiffness="20" range="0 2.6" damping="8" />
+                <joint name="knee_abdu_r" pos="0 0 0" axis="0.992238 0.12403 -0.00900218" stiffness="20" range="-0.002 0.033" />
+                <joint name="knee_arot_r" pos="0 0 0" axis="-0.12398 0.989813 -0.0699872" stiffness="20" range="0 0.263" />
+                <geom name="tibia_r" class="bone" mesh="tibia_r" />
+                <geom name="fibula_r" class="bone" mesh="fibula_r" />
+                <body name="talus_r" pos="-0.01 -0.4 0">
+                    <inertial pos="0.0059373 0.00034351 -0.001684" quat="0.467409 0.473349 0.545318 0.509998" mass="0.021206" diaginertia="0.001 0.001 0.001" />
+                    <joint name="ankle_flex_r" pos="0 0 0" axis="-0.10501 -0.17402 0.979127" stiffness="20" range="-0.873 0.35" damping="5" />
+                    <geom name="talus_r" class="bone" mesh="talus_r" />
+                    <body name="calcaneus_r" pos="-0.04877 -0.04195 0.00792">
+                        <inertial pos="0.082138 0.010802 -0.00094439" quat="0.502989 0.541339 0.493599 0.458599" mass="1.14" diaginertia="0.0031364 0.0029711 0.001" />
+                        <joint name="subtal_inve_r" pos="0 0 0" axis="0.786987 0.604988 -0.121" stiffness="20" range="-0.349 0.349" damping="5" />
+                        <geom name="foot_r" class="bone" mesh="foot_r" />
+                        <body name="toes_r" pos="0.1788 -0.002 0.00108">
+                            <inertial pos="0.022806 -0.00020971 0.0052495" quat="0.285662 0.651174 0.641653 0.287492" mass="0.28537" diaginertia="0.001 0.001 0.001" />
+                            <joint name="mtp_flex_r" pos="0 0 0" axis="-0.58095 0 0.81394" stiffness="20" range="-0.8 1.2" damping="5" />
+                            <geom name="toes_r" class="bone" mesh="toes_r" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name="patella_r" pos="0.04193 -0.42586 0">
+                <inertial pos="0 0 0" mass="0.001" diaginertia="0.001 0.001 0.001" />
+                <joint name="patella_ty_r" pos="0 0 0" axis="0 1 0" type="slide" ref="-0.018" stiffness="20" range="-0.041 -0.011" />
+                <joint name="patella_tx_r" pos="0 0 0" axis="1 0 0" type="slide" ref="0.05" stiffness="20" range="-0.023 0.052" />
+                <joint name="patella_rz_r" pos="0 0 0" axis="0 0 1" stiffness="20" range="-1.7924 0.010506" />
+                <geom name="patella_r" class="bone" mesh="patella_r" />
+            </body>
+        </body>
+        <body name="femur_l" pos="-0.056276 -0.07849 -0.07726">
+            <inertial pos="0 -0.195 0.0005" quat="0.706201 -0.708011 0 0" mass="8.4" diaginertia="0.1694 0.1694 0.024527" />
+            <joint name="hip_flex_l" pos="0 0 0" axis="0 0 1" stiffness="20" range="-1.57 2.094" damping="8" />
+            <joint name="hip_abdu_l" pos="0 0 0" axis="-1 0 0" stiffness="20" range="-1.57 0.524" damping="8" />
+            <joint name="hip_arot_l" pos="0 0 0" axis="0 -1 0" stiffness="20" range="-0.698 0.698" damping="8" />
+            <geom name="femur_l" class="bone" mesh="femur_l" />
+            <body name="tibia_l" pos="-4.6e-07 -0.40442 0.0012653">
+                <inertial pos="-0.005 -0.175 -0.0025" quat="0.712141 -0.701751 0.02005 0" mass="3.8" diaginertia="0.077159 0.077159 0.0069039" />
+                <joint name="tibia_tx_l" pos="0 0 0" axis="-0.992238 -0.12403 -0.00900218" type="slide" stiffness="20" range="-0.007 0" />
+                <joint name="tibia_ty_l" pos="0 0 0" axis="-0.12398 0.989813 0.0699872" type="slide" stiffness="20" range="0 0.002" />
+                <joint name="knee_flex_l" pos="0 0 0" axis="0 0.0710343 -0.997474" stiffness="20" range="0 2.6" damping="8" />
+                <joint name="knee_abdu_l" pos="0 0 0" axis="-0.992238 -0.12403 -0.00900218" stiffness="20" range="-0.002 0.033" />
+                <joint name="knee_arot_l" pos="0 0 0" axis="-0.12398 0.989813 0.0699872" stiffness="20" range="-0.263 0" />
+                <geom name="tibia_l" class="bone" mesh="tibia_l" />
+                <geom name="fibula_l" class="bone" mesh="fibula_l" />
+                <body name="talus_l" pos="-0.01 -0.4 0">
+                    <inertial pos="0.0059373 0.00034351 0.001684" quat="0.473349 0.467409 0.509998 0.545318" mass="0.021206" diaginertia="0.001 0.001 0.001" />
+                    <joint name="ankle_flex_l" pos="0 0 0" axis="0.10491 0.17385 0.979168" stiffness="20" range="-0.873 0.35" damping="5" />
+                    <geom name="talus_l" class="bone" mesh="talus_l" />
+                    <body name="calcaneus_l" pos="-0.04877 -0.04195 -0.00792">
+                        <inertial pos="0.082138 0.010802 0.00094439" quat="0.541339 0.502989 0.458599 0.493599" mass="1.14" diaginertia="0.0031364 0.0029711 0.001" />
+                        <joint name="subtal_inve_l" pos="0 0 0" axis="-0.786987 -0.604988 -0.121" stiffness="20" range="-0.349 0.349" damping="5" />
+                        <geom name="foot_l" class="bone" mesh="foot_l" />
+                        <body name="toes_l" pos="0.1788 -0.002 -0.00108">
+                            <inertial pos="0.022806 -0.00020971 -0.0052495" quat="0.651174 0.285662 0.287492 0.641653" mass="0.28537" diaginertia="0.001 0.001 0.001" />
+                            <joint name="mtp_flex_l" pos="0 0 0" axis="0.58095 0 0.81394" stiffness="20" range="-0.8 1.2" damping="5" />
+                            <geom name="toes_l" class="bone" mesh="toes_l" />
+                        </body>
+                    </body>
+                </body>
+            </body>
+            <body name="patella_l" pos="0.04193 -0.42586 0">
+                <inertial pos="0 0 0" mass="0.001" diaginertia="0.001 0.001 0.001" />
+                <joint name="patella_ty_l" pos="0 0 0" axis="0 1 0" type="slide" ref="-0.018" stiffness="20" range="-0.041 -0.011" />
+                <joint name="patella_tx_l" pos="0 0 0" axis="1 0 0" type="slide" ref="0.05" stiffness="20" range="-0.023 0.052" />
+                <joint name="patella_rz_l" pos="0 0 0" axis="0 0 1" stiffness="20" range="-1.792 0.01" />
+                <geom name="patella_l" class="bone" mesh="patella_l" />
+            </body>
+        </body>
+    </body>
+</mujocoinclude>

@@ -1,0 +1,34 @@
+[project]
+name = "myo_model"
+version = "0.0.0"
+authors = [{name = "myolab"}]
+description = "myo_model is a library of carefully constructed musculoskeletal models."
+readme = "README.md"
+requires-python = ">=3.10"
+license-files = ["LICENSE"]
+
+dependencies = [
+  "myo_tools",
+  "mujoco>=3.2.4",
+]
+
+[project.optional-dependencies]
+dev = ["pre-commit", "pytest", "mock", "click"]
+test = ["pytest", "mock", "click"]
+
+[tool.ruff.lint]
+ignore = ["C901", "E501", "E741", "F402", "F823", "E402" ]
+select = ["C", "E", "F", "I", "W"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+packages = {find = {exclude = ["tests*", "tests.*", "images*", "images.*","docs*", "docs.*"]}}
+
+[tool.setuptools.package-data]
+"myo_model.markerset" = ["*.xml"]
+"myo_model.myoskeleton" = ["*.xml", "includes/*.xml", "meshes/*.stl"]
+"myo_model.scene" = ["*.xml"]
