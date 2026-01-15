@@ -3,3 +3,5 @@
 __pycache__/
 .pytest_cache/
 myo_model.egg-info/
+dist/
+.ruff_cache/
