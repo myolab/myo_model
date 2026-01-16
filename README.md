@@ -1,5 +1,5 @@
-
 # MyoModel
+
 **MyoModel** is a library of carefully constructed Musculoskeletal Models.
 ![banner](https://github.com/user-attachments/assets/87897766-cf55-4932-936f-dc53711976ef)
 
@@ -14,7 +14,7 @@ The goal of MyoModel is to develop a comprehensive library that unifies the frag
 ## Usage
 There are multiple ways to explore and leverage MyoModel
   - MyoModel: For any needs involving *only* access to the models, [myo_model](https://github.com/myolab/myo_model) (this repo) is all you need
-  - MyoAPI: For programmatic access to the models and basic developmental needs, please refer to [myo_api](https://github.com/myolab/myo_api) repo
+  - MyoTools: For programmatic access to the models and basic developmental needs, please refer to [myo_tools](https://github.com/myolab/myo_tools) repo
   - MyoSuite: For building data-driven behavioral controllers for the models, please refer to [myosuite](https://github.com/MyoHub/myosuite) repo
 
 ## License
@@ -23,11 +23,30 @@ A permissive license for non-commercial scientific research is available [here](
 ## Citation
 ```bibtex
 @techreport{myoskeleton,
-  author      = {Vittorio Caggiano AND Vittorio La Barbera AND Vikash Kumar},
+  author      = {Vittorio Caggiano AND Vittorio La Barbera AND Andrea Prestia AND Ouassim Aouattah AND Pierre Schumacher AND Varun Joshi AND Vikash Kumar},
   title       = {MyoSkeleton: A Universal Human Skeletal Model},
   institution = {MyoLab Inc.},
   year        = {2024},
   type        = {White Paper},
   note        = {Available at: \url{https://github.com/myolab/myo_model}},
 }
+```
+
+## Example usage
+```python
+import mujoco
+import mujoco.viewer
+from myo_model.utils import model_utils
+
+model_path = model_utils.get_model_xml_path()
+mj_model = mujoco.MjModel.from_xml_path(model_path)
+
+# Make the data object
+mj_data = mujoco.MjData(mj_model)
+
+# Run the viewer
+with mujoco.viewer.launch_passive(
+    mj_model, mj_data) as viewer:
+    while viewer.is_running():
+        viewer.sync()
 ```

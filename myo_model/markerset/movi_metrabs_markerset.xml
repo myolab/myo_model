@@ -1,0 +1,102 @@
+<!--
+Copyright (c) 2026 MyoLab, Inc.
+
+Released under the MyoLab Non-Commercial Scientific Research License
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+You may not use this file except in compliance with the License.
+See the LICENSE file for governing permissions and limitations.
+-->
+
+<!--Summary: A markerset corresponding to the 87 MoVi keypoints detected by MeTRAbs https://github.com/isarandi/metrabs -->
+
+<markers name="myolab_movi_metrabs_87" model="MyoSkeleton v1.0.0">
+    <marker body="thoracic_spine" name="backneck" pos="-0.042  0.300  0.0" />
+    <marker body="thoracic_spine" name="upperback" pos="-0.059 0.250  0.0" />
+    <marker body="thoracic_spine" name="clavicle" pos=" 0.080  0.240  0.0" />
+    <marker body="thoracic_spine" name="sternum" pos=" 0.120  0.144  0.0" />
+    <marker body="thoracic_spine" name="umbilicus" pos=" 0.150 -0.102 0.0" />
+    <marker body="skull" name="lfronthead" pos=" 0.087 0.094 -0.051" />
+    <marker body="skull" name="lbackhead" pos="-0.063 0.031 -0.049" />
+    <marker body="thoracic_spine" name="lback" pos="-0.059 0.250 -0.050" />
+    <marker body="clavicle_l" name="lshom" pos="-0.025 0.037 -0.141" />
+    <marker body="humerus_l" name="lupperarm" pos="-0.005 -0.105 -0.041" />
+    <marker body="ulna_l" name="lelbm" pos="-0.005 0.010 -0.048" />
+    <marker body="radius_l" name="lforearm" pos=" 0.011 -0.136 -0.037" />
+    <marker body="metacarpal_1_l" name="lwrithumbside" pos=" 0.011 0.036 -0.017" />
+    <marker body="lunate_l" name="lwripinkieside" pos="-0.033 0.006  0.002" />
+    <marker body="proximal_phalanx_4_l" name="lfin" pos="0.00 0.00 0.00" />
+    <marker body="pelvis" name="lasis" pos="-0.012 -0.005 -0.147" />
+    <marker body="pelvis" name="lpsis" pos="-0.170 0.066 -0.062" />
+    <marker body="femur_l" name="lfrontthigh" pos=" 0.070 -0.157 -0.017" />
+    <marker body="femur_l" name="lthigh" pos="-0.021 -0.025 -0.08" />
+    <marker body="tibia_l" name="lknem" pos=" 0.002 -0.002 -0.055" />
+    <marker body="talus_l" name="lankm" pos="-0.007 0.015 -0.047" />
+    <marker body="calcaneus_l" name="LHeel" pos="-0.020  0.010  0.006" />
+    <marker body="calcaneus_l" name="lfifthmetatarsal" pos="0.148 0.006 -0.045" />
+    <marker body="toes_l" name="LBigToe" pos="0.040 -0.002 0.026" />
+    <marker body="skull" name="lcheek" pos="0.104 0.021 -0.059" />
+    <marker body="thoracic_spine" name="lbreast" pos=" 0.120  0.144 -0.110" />
+    <marker body="ulna_l" name="lelbinner" pos=" 0.009 0.001  0.022" />
+    <marker body="thoracic_spine" name="lwaist" pos="0.050 -0.0320 -0.138" />
+    <marker body="distal_phalanx_1_l" name="lthumb" pos="-0.011 0.024 -0.010" />
+    <marker body="femur_l" name="lfrontinnerthigh" pos="0.055 -0.258 0.027" />
+    <marker body="tibia_l" name="linnerknee" pos="0.004 -0.002 0.050" />
+    <marker body="tibia_l" name="lshin" pos="-0.006 -0.170 -0.050" />
+    <marker body="calcaneus_l" name="lfirstmetatarsal" pos="0.180 0.006  0.028" />
+    <marker body="toes_l" name="lfourthtoe" pos="0.010 -0.001 -0.038" />
+    <marker body="scapula_l" name="lscapula" pos="-0.110 -0.120  0.090" />
+    <marker body="pelvis" name="lbum" pos="-0.202 -0.075 -0.079" />
+    <marker body="skull" name="rfronthead" pos=" 0.087 0.094  0.051" />
+    <marker body="skull" name="rbackhead" pos="-0.063 0.031  0.049" />
+    <marker body="thoracic_spine" name="rback" pos="-0.059 0.250  0.050" />
+    <marker body="clavicle_r" name="rshom" pos="-0.025 0.037  0.141" />
+    <marker body="humerus_r" name="rupperarm" pos="0.005 -0.105 0.041" />
+    <marker body="ulna_r" name="relbm" pos=" 0.004  0.010  0.048" />
+    <marker body="radius_r" name="rforearm" pos=" 0.011 -0.136  0.037" />
+    <marker body="metacarpal_1_r" name="rwrithumbside" pos=" 0.011 0.036 0.017" />
+    <marker body="lunate_r" name="rwripinkieside" pos="-0.033  0.006 -0.002" />
+    <marker body="proximal_phalanx_4_r" name="rfin" pos="0.00 0.00 0.00" />
+    <marker body="pelvis" name="rasis" pos="-0.012 -0.005  0.147" />
+    <marker body="pelvis" name="rpsis" pos="-0.170 0.066  0.062" />
+    <marker body="femur_r" name="rfrontthigh" pos=" 0.070 -0.157 0.017" />
+    <marker body="femur_r" name="rthigh" pos="-0.021 -0.025 0.08" />
+    <marker body="tibia_r" name="rknem" pos="0.002 -0.002 0.055" />
+    <marker body="talus_r" name="rankm" pos="-0.007 0.015 0.047" />
+    <marker body="calcaneus_r" name="RHeel" pos="-0.020 0.010 -0.006" />
+    <marker body="calcaneus_r" name="rfifthmetatarsal" pos="0.148 0.006  0.045" />
+    <marker body="toes_r" name="RBigToe" pos="0.040 0.002 -0.026" />
+    <marker body="skull" name="rcheek" pos="0.104 0.021  0.059" />
+    <marker body="thoracic_spine" name="rbreast" pos=" 0.120  0.144  0.110" />
+    <marker body="ulna_r" name="relbinner" pos="-0.009  0.001 -0.022" />
+    <marker body="thoracic_spine" name="rwaist" pos="0.050 -0.0320  0.138" />
+    <marker body="distal_phalanx_1_r" name="rthumb" pos="-0.011 0.024 0.010" />
+    <marker body="femur_r" name="rfrontinnerthigh" pos="0.055 -0.258 -0.027" />
+    <marker body="tibia_r" name="rinnerknee" pos="0.004 -0.002 -0.050" />
+    <marker body="tibia_r" name="rshin" pos="0.006 -0.170 0.050" />
+    <marker body="calcaneus_r" name="rfirstmetatarsal" pos="0.180 0.006 -0.028" />
+    <marker body="toes_r" name="rfourthtoe" pos="0.01 -0.001 0.038" />
+    <marker body="scapula_r" name="rscapula" pos="-0.110 -0.120 -0.090" />
+    <marker body="pelvis" name="rbum" pos="-0.202 -0.075  0.079" />
+    <marker body="skull" name="Head" pos=" 0.012 0.063 0.0" />
+    <marker body="pelvis" name="mhip" pos="-0.055 -0.078  0.0" />
+    <marker body="pelvis" name="CHip" pos="-0.091 0.036  0.0" />
+    <marker body="thoracic_spine" name="thorax" pos=" 0.019  0.270  0.0" />
+    <marker body="talus_l" name="LAnkle" pos="0.005 0.015 -0.0" />
+    <marker body="ulna_l" name="LElbow" pos=" 0.001 0.001 -0.015" />
+    <marker body="pelvis" name="LHip" pos="-0.055 -0.078 -0.078" />
+    <marker body="proximal_phalanx_2_l" name="LHand" pos="0.00 0.00 0.00" />
+    <marker body="tibia_l" name="LKnee" pos="0.004 -0.002 -0.002" />
+    <marker body="humerus_l" name="LShoulder" pos="-0.001 -0.003  0.002" />
+    <marker body="lunate_l" name="LWrist" pos="-0.004 0.009 -0.002" />
+    <marker body="calcaneus_l" name="LFoot" pos=" 0.220 -0.0   -0.008" />
+    <marker body="talus_r" name="RAnkle" pos="0.005 0.015 0.0" />
+    <marker body="ulna_r" name="RElbow" pos="-0.001 -0.001  0.015" />
+    <marker body="pelvis" name="RHip" pos="-0.055 -0.078  0.078" />
+    <marker body="proximal_phalanx_2_r" name="RHand" pos="0.00 0.00 0.00" />
+    <marker body="tibia_r" name="RKnee" pos="0.004 -0.002 -0.002" />
+    <marker body="humerus_r" name="RShoulder" pos="0.001 -0.003 0.002" />
+    <marker body="lunate_r" name="RWrist" pos="-0.004  0.009 -0.002" />
+    <marker body="calcaneus_r" name="RFoot" pos=" 0.220 0.00   0.008" />
+</markers>
